@@ -1,0 +1,28 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox-toggle {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    display: none;
+    color: var(--color-white);
+    font-size: 16px;
+  }
+}
+
+.checkbox:checked ~ .checkbox-toggle {
+  background-color: var(--color-primary);
+}
+
+.checkbox:checked ~ .checkbox-toggle i {
+  display: inline;
+}

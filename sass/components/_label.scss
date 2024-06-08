@@ -1,0 +1,26 @@
+.label {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 5px 15px;
+
+  i {
+    font-size: 16px;
+    color: currentColor;
+    margin-right: 5px;
+  }
+
+  &-info {
+    color: var(--color-info);
+    background-color: var(--color-info-light);
+  }
+
+  &-success {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+  }
+
+  &-danger {
+    color: var(--color-danger);
+    background-color: var(--color-danger-light);
+  }
+}
