@@ -4,6 +4,9 @@
   background-size: 50% 100%;
   background-position: right;
   background-repeat: no-repeat;
+  padding: 45px 124px;
+  padding-right: 0px;
+  overflow: hidden;
 }
 
 .navigation {
@@ -12,6 +15,7 @@
   justify-content: space-between;
   padding-bottom: 45px;
   margin-bottom: 45px;
+  padding-right: 124px;
 }
 
 .logo {
@@ -59,10 +63,9 @@
 .carousel-container {
   width: 50%;
   height: 100%;
-  padding-left: 50px;
   padding-top: 400px;
   display: flex;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .carousel-item {

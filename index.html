@@ -14,7 +14,7 @@
     <title>Hounter</title>
   </head>
   <body>
-    <header class="header body-padding">
+    <header class="header">
       <nav class="navigation">
         <img src="./img/logo.png" alt="Hounter logo" class="logo" />
         <ul class="navigation-menu">
@@ -68,7 +68,7 @@
             </li>
           </ul>
         </div>
-        <div class="carousel-container">
+        <div class="carousel-container" id="carousel-container">
           <div class="carousel-item">
             <div class="users">
               <img
@@ -127,18 +127,18 @@
               <i class="icon-house"></i> <span>House</span>
             </button>
             <button class="btn btn-outline btn-icon">
-              <i class="icon-villa"></i> <span>House</span>
+              <i class="icon-villa"></i> <span>Villa</span>
             </button>
             <button class="btn btn-outline btn-icon">
               <i class="icon-apartment"></i> <span>Apartment</span>
             </button>
           </div>
           <div class="arrows">
-            <button class="btn btn-outline btn-small"></button>
-            <button class="btn btn-outline btn-small"></button>
+            <button id="arrow-left" class="btn btn-outline btn-small"></button>
+            <button id="arrow-right" class="btn btn-outline btn-small"></button>
           </div>
         </div>
-        <div class="features">
+        <div class="features" id="features">
           <div class="card">
             <div class="feature-img">
               <div class="label label-danger">
@@ -632,6 +632,6 @@
         </ul>
       </div>
     </footer>
-    <script type="module" src="/script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
