@@ -1,3 +1,29 @@
+const setActiveItem = (elementList, className) => {
+  elementList.forEach((item, index) => {
+    item.addEventListener("click", function () {
+      item.classList.toggle(className);
+
+      elementList.forEach(function (i, key) {
+        if (index !== key) {
+          i.classList.remove(className);
+        }
+      });
+    });
+  });
+};
+
+// Navigation
+
+const navItems = document.querySelectorAll(".navigation-item");
+
+setActiveItem(navItems, "navigation-item-active");
+
+// Featured
+
+const filterItems = document.querySelectorAll(".btn-filter");
+
+setActiveItem(filterItems, "btn-outline-active");
+
 // Presentation
 
 const scrollContainer = document.querySelector("#carousel-container");

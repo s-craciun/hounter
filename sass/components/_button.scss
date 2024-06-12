@@ -30,6 +30,12 @@
       background-color: var(--color-primary-light);
       border: 1px solid transparent;
     }
+
+    &-active {
+      transform: scale(1.1);
+      background-color: var(--color-primary-light);
+      border: 1px solid transparent;
+    }
   }
 
   &-arrow-end {
