@@ -1,5 +1,4 @@
 .header {
-  height: 720px;
   background-image: url("../../img/hero-medium.png");
   background-size: 50% 100%;
   background-position: right;
@@ -7,6 +6,7 @@
   padding: 45px 124px;
   padding-right: 0px;
   overflow: hidden;
+  margin-bottom: 60px;
 }
 
 .navigation {
@@ -39,6 +39,7 @@
     margin-left: 30px;
   }
 
+  a,
   a:link,
   a:visited {
     font-weight: 600;
@@ -60,11 +61,18 @@
   color: var(--color-secondary);
 }
 
+.partner {
+  img {
+    height: 64px;
+    width: 84px;
+  }
+}
+
 .carousel-container {
-  width: 50%;
-  height: 100%;
-  padding-top: 400px;
   display: flex;
+  align-self: flex-end;
+  width: 50%;
+  margin-top: 400px;
   overflow: hidden;
 }
 
@@ -85,6 +93,7 @@
     border: 3px solid var(--color-white);
     border-radius: 50%;
     margin-right: 10px;
+    object-fit: cover;
   }
 }
 

@@ -1,4 +1,5 @@
 @import "./abstracts/utilities";
+@import "./abstracts/animations";
 
 @import "./base/base";
 @import "./base/typography";
@@ -12,6 +13,7 @@
 @import "./components/select";
 @import "./components/textarea";
 @import "./components/checkbox";
+@import "./components/cookies";
 
 @import "./layout/header";
 @import "./layout/footer";

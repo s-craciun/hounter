@@ -1,15 +1,23 @@
+.review-wrapper {
+  min-width: 60%;
+  max-width: 60%;
+  min-height: 640px;
+  display: inline-block;
+  white-space: wrap;
+  text-align: left;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
 .review {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px;
   border-radius: 8px;
-  min-width: 60%;
   padding-top: calc(100px + 180px + 40px);
-
-  &:not(:last-child) {
-    margin-right: 40px;
-  }
 
   &--1 {
     background-image: url("../../img/review-1.jpeg");

@@ -40,11 +40,9 @@
 }
 .icon-arrow-inverse:before {
   content: "\e901";
-  color: #1b1c57;
 }
 .icon-arrow:before {
   content: "\e902";
-  color: #1b1c57;
 }
 .icon-bath:before {
   content: "\e903";

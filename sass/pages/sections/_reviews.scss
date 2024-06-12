@@ -1,7 +1,43 @@
 .reviews {
-  margin-bottom: 150px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .reviews-container {
-  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.switch-btns {
+  display: inline-block;
+  width: 55px;
+  justify-self: center;
+  margin: 0 auto;
+}
+
+.switch-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background-color: var(--color-grey-1);
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-grey-2);
+    transform: scale(1.1);
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }

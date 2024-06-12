@@ -1,10 +1,11 @@
 .tour {
   display: flex;
+  margin-bottom: 100px;
 }
 
 .tour-info {
   width: 60%;
-  padding-right: 140px;
+  padding-right: 120px;
 }
 
 .tour-description {
@@ -33,11 +34,14 @@
 .divider {
   height: 2px;
   background-color: var(--color-grey-1);
+  width: 90%;
 }
 
 .contact-owner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 90%;
 
   .owner {
     img {
@@ -49,12 +53,20 @@
 
 .composition {
   width: 60%;
+  position: relative;
 }
 
 .video-container {
-  height: 400px;
-  width: 500px;
+  height: 416px;
+  width: 478px;
   position: relative;
+  float: right;
+
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .video {
@@ -63,9 +75,59 @@
   object-fit: cover;
 }
 
-.play {
+.btn-play {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+
+  img {
+    height: 48px;
+    width: 48px;
+  }
+
+  &:hover {
+    filter: brightness(65%);
+  }
+}
+
+.btn-play-hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 40px;
+  gap: 15px;
+  position: absolute;
+  bottom: -40px;
+}
+
+.composition-item {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s;
+
+  &-big {
+    height: 168px;
+    width: 296px;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &-small {
+    height: 80px;
+    width: 96px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

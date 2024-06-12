@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hounter site for sharing houses" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preload" href="./img/hero-medium.png" as="image"/> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
@@ -19,16 +21,16 @@
         <img src="./img/logo.png" alt="Hounter logo" class="logo" />
         <ul class="navigation-menu">
           <li class="navigation-item">
-            <a href="#">About Us</a>
+            <a href="#" aria-label="About Us">About Us</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Article</a>
+            <a href="#" aria-label="Article">Article</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Property</a>
+            <a href="#" aria-label="Property">Property</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Sign Up</a>
+            <a href="#" aria-label="Sign Up">Sign Up</a>
           </li>
         </ul>
       </nav>
@@ -42,13 +44,16 @@
             Everything you need about finding your place to live will be here,
             where it will be easier for you
           </p>
-          <form class="input-button mb-sm">
+          <form class="input-button mb-sm to-right">
             <i class="icon-location search-icon"></i>
             <input
               type="text"
               placeholder="Search for the location you want!"
             />
-            <button class="btn btn-fill btn-arrow-end input-btn">
+            <button
+              class="btn btn-fill btn-arrow-end input-btn"
+              aria-label="Search"
+            >
               <span>Search</span>
             </button>
           </form>
@@ -118,24 +123,36 @@
       </div>
     </header>
     <main>
-      <section class="featured body-padding">
+      <section class="featured">
         <p class="tip tip-left">Our Recommendation</p>
         <div class="featured-top mb-sm">
-          <h2 class="heading-2">Featured House</h2>
+          <h2 class="heading-2 to-right">Featured House</h2>
           <div class="filters">
-            <button class="btn btn-outline btn-icon">
+            <button class="btn btn-outline btn-icon" aria-label="House">
               <i class="icon-house"></i> <span>House</span>
             </button>
-            <button class="btn btn-outline btn-icon">
+            <button class="btn btn-outline btn-icon" aria-label="Villa">
               <i class="icon-villa"></i> <span>Villa</span>
             </button>
-            <button class="btn btn-outline btn-icon">
+            <button class="btn btn-outline btn-icon" aria-label="Apartment">
               <i class="icon-apartment"></i> <span>Apartment</span>
             </button>
           </div>
           <div class="arrows">
-            <button id="arrow-left" class="btn btn-outline btn-small"></button>
-            <button id="arrow-right" class="btn btn-outline btn-small"></button>
+            <button
+              id="arrow-left"
+              class="btn btn-small"
+              aria-label="Arrow Left"
+            >
+              <i class="icon-arrow-inverse"></i>
+            </button>
+            <button
+              id="arrow-right"
+              class="btn btn-small"
+              aria-label="Arrow Right"
+            >
+              <i class="icon-arrow"></i>
+            </button>
           </div>
         </div>
         <div class="features" id="features">
@@ -220,7 +237,9 @@
       <section class="tour body-padding">
         <div class="tour-info">
           <p class="tip tip-left">Ready to Sell!</p>
-          <h2 class="heading-2 mb-x-sm">Let’s tour and see our house!</h2>
+          <h2 class="heading-2 mb-x-sm to-right">
+            Let’s tour and see our house!
+          </h2>
           <p class="tour-description mb-sm">
             Houses recommended by our partners that have been curated to become
             the home of your dreams!
@@ -255,7 +274,7 @@
                 <p class="label-default address">Manchester, Kentucky</p>
               </div>
             </div>
-            <button class="btn btn-fill btn-icon">
+            <button class="btn btn-fill btn-icon" aria-label="Contact Now">
               <i class="icon-call"></i>
               <span>Contact Now</span>
             </button>
@@ -263,192 +282,141 @@
         </div>
         <div class="composition">
           <div class="video-container">
-            <video class="video" muted loop>
+            <video id="video" class="video" muted loop>
               <source src="img/video.mp4" type="video/mp4" />
               Your browser is not supported!
             </video>
-            <img src="./img/Icons/play.svg" alt="Play" class="play" />
+            <button id="btn-play" class="btn-play" aria-label="Play video">
+              <img src="./img/Icons/play.svg" alt="Play" class="play" />
+            </button>
+          </div>
+          <div class="gallery">
+            <img
+              src="./img/sofa.jpeg"
+              alt="Sofa"
+              class="composition-item composition-item-big"
+            />
+            <img
+              src="./img/house-staff.jpeg"
+              alt="House staff"
+              class="composition-item composition-item-small"
+            />
+            <img
+              src="./img/furniture.jpeg"
+              alt="Furniture"
+              class="composition-item composition-item-small"
+            />
           </div>
         </div>
       </section>
       <section class="reviews">
         <div class="center-text">
           <p class="tip tip-center">See Our Review</p>
-          <h2 class="heading-2 mb-md">What Our User Say About Us</h2>
+          <h2 class="heading-2 mb-md to-top">What Our User Say About Us</h2>
         </div>
-        <div class="reviews-container">
-          <div class="review review--1">
-            <div class="review-content">
-              <h3 class="heading-3 mb-x-sm">
-                Best! I got the house I wanted through Hounter
-              </h3>
-              <p class="review-text mb-sm">
-                Through this website I can get a house with the type and
-                specifications I want very easily, without a complicated process
-                to be able to find information on the house we want.
-              </p>
-              <div class="rating">
-                <div class="owner">
-                  <img src="./img/user-1.jpeg" alt="User" />
-                  <div class="user-info">
-                    <p class="subtitle">Dianne Russell</p>
-                    <p class="label-default">Manager Director</p>
+        <div id="reviews-container" class="reviews-container">
+          <div id="review-1" class="review-wrapper">
+            <div class="review review--1">
+              <div class="review-content">
+                <h3 class="heading-3 mb-x-sm">
+                  Best! I got the house I wanted through Hounter
+                </h3>
+                <p class="review-text mb-sm">
+                  Through this website I can get a house with the type and
+                  specifications I want very easily, without a complicated
+                  process to be able to find information on the house we want.
+                </p>
+                <div class="rating">
+                  <div class="owner">
+                    <img src="./img/user-1.jpeg" alt="User" />
+                    <div class="user-info">
+                      <p class="subtitle">Dianne Russell</p>
+                      <p class="label-default">Manager Director</p>
+                    </div>
                   </div>
-                </div>
-                <div class="grade">
-                  <i class="icon-star"></i>
-                  <p class="heading-3">4.6</p>
+                  <div class="grade">
+                    <i class="icon-star"></i>
+                    <p class="heading-3">4.6</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="review review--2">
-            <div class="review-content">
-              <h3 class="heading-3 mb-x-sm">
-                Best! I got the house I wanted through Hounter
-              </h3>
-              <p class="review-text mb-sm">
-                Through this website I can get a house with the type and
-                specifications I want very easily, without a complicated process
-                to be able to find information on the house we want.
-              </p>
-              <div class="rating">
-                <div class="owner">
-                  <img src="./img/user-1.jpeg" alt="User" />
-                  <div class="user-info">
-                    <p class="subtitle">Dianne Russell</p>
-                    <p class="label-default">Manager Director</p>
+          <div id="review-2" class="review-wrapper">
+            <div class="review review--2">
+              <div class="review-content">
+                <h3 class="heading-3 mb-x-sm">
+                  Best! I got the house I wanted through Hounter
+                </h3>
+                <p class="review-text mb-sm">
+                  Through this website I can get a house with the type and
+                  specifications I want very easily, without a complicated
+                  process to be able to find information on the house we want.
+                </p>
+                <div class="rating">
+                  <div class="owner">
+                    <img src="./img/user-1.jpeg" alt="User" />
+                    <div class="user-info">
+                      <p class="subtitle">Dianne Russell</p>
+                      <p class="label-default">Manager Director</p>
+                    </div>
                   </div>
-                </div>
-                <div class="grade">
-                  <i class="icon-star"></i>
-                  <p class="heading-3">4.6</p>
+                  <div class="grade">
+                    <i class="icon-star"></i>
+                    <p class="heading-3">4.6</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="review review--3">
-            <div class="review-content">
-              <h3 class="heading-3 mb-x-sm">
-                Best! I got the house I wanted through Hounter
-              </h3>
-              <p class="review-text mb-sm">
-                Through this website I can get a house with the type and
-                specifications I want very easily, without a complicated process
-                to be able to find information on the house we want.
-              </p>
-              <div class="rating">
-                <div class="owner">
-                  <img src="./img/user-1.jpeg" alt="User" />
-                  <div class="user-info">
-                    <p class="subtitle">Dianne Russell</p>
-                    <p class="label-default">Manager Director</p>
+          <div id="review-3" class="review-wrapper">
+            <div class="review review--3">
+              <div class="review-content">
+                <h3 class="heading-3 mb-x-sm">
+                  Best! I got the house I wanted through Hounter
+                </h3>
+                <p class="review-text mb-sm">
+                  Through this website I can get a house with the type and
+                  specifications I want very easily, without a complicated
+                  process to be able to find information on the house we want.
+                </p>
+                <div class="rating">
+                  <div class="owner">
+                    <img src="./img/user-1.jpeg" alt="User" />
+                    <div class="user-info">
+                      <p class="subtitle">Dianne Russell</p>
+                      <p class="label-default">Manager Director</p>
+                    </div>
                   </div>
-                </div>
-                <div class="grade">
-                  <i class="icon-star"></i>
-                  <p class="heading-3">4.6</p>
+                  <div class="grade">
+                    <i class="icon-star"></i>
+                    <p class="heading-3">4.6</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="switch-btns"></div>
       </section>
       <section class="articles body-padding">
         <div class="center-text mb-md">
           <p class="tip tip-center">See tips and trick from our partnership</p>
-          <h2 class="heading-2 mb-x-sm">
+          <h2 class="heading-2 mb-x-sm to-top">
             Find out more about selling and <br />
             buying homes
           </h2>
-          <button class="btn btn-fill">More Articles</button>
+          <button
+            id="btn-more"
+            class="btn btn-fill"
+            aria-label="Show more articles"
+          >
+            More Articles
+          </button>
         </div>
         <div class="articles-content">
-          <div class="articles-list">
-            <div class="article">
-              <img
-                src="./img/article-1.jpeg"
-                alt="Article 1"
-                class="article-preview"
-              />
-              <div class="article-info">
-                <div class="article-author mb-x-sm">
-                  <img src="./img/user-1.jpeg" alt="Author 1" />
-                  <span class="label-text">Dianne Russell</span>
-                </div>
-                <p class="subtitle article-title mb-x-sm">
-                  The things we need to check when we want to buy a house
-                </p>
-                <div class="article-details">
-                  <div class="clock-icon">&nbsp;</div>
-                  <span class="label-text">4 min read | 25 Apr 2021</span>
-                </div>
-              </div>
-            </div>
-            <div class="article">
-              <img
-                src="./img/article-2.jpeg"
-                alt="Article 2"
-                class="article-preview"
-              />
-              <div class="article-info">
-                <div class="article-author mb-x-sm">
-                  <img src="./img/user-2.jpeg" alt="Author 2" />
-                  <span class="label-text">Courtney Henry</span>
-                </div>
-                <p class="subtitle article-title mb-x-sm">
-                  7 Ways to distinguish the quality of the house we want to buy
-                </p>
-                <div class="article-details">
-                  <div class="clock-icon">&nbsp;</div>
-                  <span class="label-text">6 min read | 24 Apr 2021</span>
-                </div>
-              </div>
-            </div>
-            <div class="article">
-              <img
-                src="./img/article-3.jpeg"
-                alt="Article 3"
-                class="article-preview"
-              />
-              <div class="article-info">
-                <div class="article-author mb-x-sm">
-                  <img src="./img/user-3.jpeg" alt="Author 3" />
-                  <span class="label-text">Darlene Robertson</span>
-                </div>
-                <p class="subtitle article-title mb-x-sm">
-                  The best way to know the quality of the house we want to buy
-                </p>
-                <div class="article-details">
-                  <div class="clock-icon">&nbsp;</div>
-                  <span class="label-text">2 min read | 24 Apr 2021</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="active-article">
-            <img
-              src="./img/house-1.jpeg"
-              alt="House"
-              class="active-article-img mb-x-sm"
-            />
-            <div class="article-author mb-x-sm">
-              <img src="./img/user-2.jpeg" alt="Author" />
-              <span class="label-text">Cameron Williamson</span>
-            </div>
-            <h3 class="heading-3 mb-x-sm">
-              12 Things to know before buying a house
-            </h3>
-            <p class="mb-x-sm">
-              Want to buy a house but are unsure about what we should know, here
-              I will try to explain what we should know and check when we want
-              to buy a house
-            </p>
-            <div class="article-details">
-              <div class="clock-icon">&nbsp;</div>
-              <span class="label-text">8 min read | 25 Apr 2021</span>
-            </div>
-          </div>
+          <div class="articles-list"></div>
+          <div class="active-article"></div>
         </div>
       </section>
       <section class="subscribe body-padding">
@@ -456,52 +424,54 @@
           <img
             src="./img/sub-1.jpeg"
             alt="Chair"
-            class="subscribe-img subscribe-img--1 subscribe-img-square"
+            class="subscribe-img subscribe-img--1 subscribe-img-square to-right"
           />
           <img
             src="./img/user-3.jpeg"
             alt="User"
-            class="subscribe-img subscribe-img--2 subscribe-img-circle"
+            class="subscribe-img subscribe-img--2 subscribe-img-circle to-top"
           />
           <img
             src="./img/user-2.jpeg"
             alt="User"
-            class="subscribe-img subscribe-img--3 subscribe-img-circle"
+            class="subscribe-img subscribe-img--3 subscribe-img-circle to-bottom"
           />
           <img
             src="./img/house-4.jpeg"
             alt="House"
-            class="subscribe-img subscribe-img--4 subscribe-img-square"
+            class="subscribe-img subscribe-img--4 subscribe-img-square to-top"
           />
           <div class="subscribe-content">
-            <h2 class="heading-2 center-text mb-md">
+            <h2 class="heading-2 center-text mb-md to-top">
               Subscribe For More Info and update from Hounter
             </h2>
             <form class="input-button">
               <i class="icon-mail subscribe-icon"></i>
               <input type="text" placeholder="Your email here" />
-              <button class="btn btn-fill input-btn">Subscribe Now</button>
+              <button class="btn btn-fill input-btn" aria-label="Subscribe Now">
+                Subscribe Now
+              </button>
             </form>
           </div>
           <img
             src="./img/sub-2.jpeg"
             alt="House"
-            class="subscribe-img subscribe-img--5 subscribe-img-square"
+            class="subscribe-img subscribe-img--5 subscribe-img-square to-bottom"
           />
           <img
             src="./img/user-4.jpeg"
             alt="User"
-            class="subscribe-img subscribe-img--6 subscribe-img-circle"
+            class="subscribe-img subscribe-img--6 subscribe-img-circle to-top"
           />
           <img
             src="./img/user-5.jpeg"
             alt="User"
-            class="subscribe-img subscribe-img--7 subscribe-img-circle"
+            class="subscribe-img subscribe-img--7 subscribe-img-circle to-left"
           />
           <img
             src="./img/furniture.jpeg"
             alt="House"
-            class="subscribe-img subscribe-img--8 subscribe-img-square"
+            class="subscribe-img subscribe-img--8 subscribe-img-square to-top"
           />
         </div>
       </section>
@@ -518,7 +488,7 @@
           <p class="mb-lg">
             We then make sure the work i done to your complete satisfaction.
           </p>
-          <img src="./img/create.png" alt="Hammer" />
+          <img src="./img/create.png" alt="Hammer" class="grow" />
         </div>
         <form action="#" class="join-form">
           <div class="form-item">
@@ -584,13 +554,19 @@
         </p>
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://www.facebook.com/"><i class="icon-fb"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"
+              ><i class="icon-fb"></i
+            ></a>
           </li>
           <li class="social-item">
-            <a href="https://www.twitter.com/"><i class="icon-tw"></i></a>
+            <a href="https://www.twitter.com/" aria-label="Twitter"
+              ><i class="icon-tw"></i
+            ></a>
           </li>
           <li class="social-item">
-            <a href="https://www.pinterest.com/"><i class="icon-pin"></i></a>
+            <a href="https://www.pinterest.com/" aria-label="Pinterest"
+              ><i class="icon-pin"></i
+            ></a>
           </li>
         </ul>
       </div>
@@ -632,6 +608,13 @@
         </ul>
       </div>
     </footer>
+    <div class="cookies">
+      <i class="icon-cookie"></i>
+      <span class="body-bd">We are using cookies!</span>
+      <button class="btn-close" aria-label="Close notification">
+        <i class="icon-close"></i>
+      </button>
+    </div>
     <script src="/script.js"></script>
   </body>
 </html>

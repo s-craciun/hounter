@@ -1,10 +1,13 @@
 .featured {
-  overflow: hidden;
+  padding: 45px 124px;
+  padding-right: 0px;
+  margin-bottom: 100px;
 
   &-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 124px;
   }
 }
 
@@ -17,9 +20,19 @@
 }
 
 .features {
+  overflow: hidden;
   display: flex;
 
   & > *:not(:last-child) {
     margin-right: 40px;
+  }
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: 10px;
   }
 }
