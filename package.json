@@ -7,7 +7,9 @@
     "watch:sass": "sass ./sass/main.scss ./css/style.css -w",
     "dev": "vite --open",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "compile:sass": "sass ./sass/main.scss ./css/style.comp.css",
+    "compress:css": "sass --style=compressed ./css/style.comp.css ./css/style.css"
   },
   "devDependencies": {
     "sass": "^1.77.4",
